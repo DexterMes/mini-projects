@@ -1,0 +1,80 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f4f4f4;
+}
+
+.lightbulb-container {
+	text-align: center;
+}
+
+.lightbulb {
+	position: relative;
+	width: 120px;
+	height: 220px;
+	margin: 20px auto;
+}
+
+.bulb-glass {
+	width: 120px;
+	height: 180px;
+	background-color: #fff;
+	border-radius: 50% 50% 30% 30%;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+	overflow: hidden;
+}
+
+.filament {
+	width: 12px;
+	height: 50px;
+	background-color: #ffcc00;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	display: none; /* Initially hidden */
+}
+
+.bulb-base {
+	width: 60px;
+	height: 30px;
+	background-color: #777;
+	border-radius: 20px 20px 5px 5px;
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.lightbulb.on .bulb-glass {
+	background-color: #ffcc00;
+	box-shadow: 0 0 20px #ffcc00, 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lightbulb.on .filament {
+	display: block; /* Show filament when the light is on */
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
