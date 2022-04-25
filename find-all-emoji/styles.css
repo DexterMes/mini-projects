@@ -1,0 +1,53 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f0f0f0;
+}
+
+.container {
+	text-align: center;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 400px;
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+textarea {
+	width: 80%;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	resize: none;
+}
+
+.counter {
+	position: relative;
+	left: 40%;
+	font-size: 16px;
+	color: #333;
+}
+
+#emojiOutput {
+	margin-top: 20px;
+	font-size: 20px;
+	color: #333;
+}
+
+#gameStatus {
+	margin-top: 10px;
+	font-size: 18px;
+	color: green;
+	font-weight: bold;
+}
