@@ -1,0 +1,185 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #f0f0f0;
+}
+
+.container {
+	text-align: center;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	font-size: 24px;
+	margin: 0;
+}
+
+.game-info {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin: 5px 2px;
+}
+
+.game-info > :first-child {
+	position: absolute;
+	left: 50%;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	transform: translateX(-50%);
+}
+
+.game-info > :last-child {
+	margin-left: auto;
+}
+
+.blue {
+	color: blue;
+	font-size: 20px;
+}
+
+.red {
+	color: red;
+	font-size: 20px;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	background-color: black;
+	gap: 7px;
+	width: 400px;
+	height: 400px;
+}
+
+.box {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#a1 {
+	border-bottom-right-radius: 10px;
+}
+
+#a2 {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#a3 {
+	border-bottom-left-radius: 10px;
+}
+
+#b1 {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#b2 {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#b3 {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#c1 {
+	border-top-right-radius: 10px;
+}
+
+#c2 {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#c3 {
+	border-top-left-radius: 10px;
+}
+
+.circle {
+	width: 90px;
+	height: 90px;
+	box-sizing: border-box;
+	background-color: transparent;
+	border: 18px solid blue;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cross {
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+
+.cross::before,
+.cross::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 18px;
+	border-radius: 3px;
+	background-color: red;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cross::after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#win-line-svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	pointer-events: none;
+}
+
+#win-line {
+	stroke: black;
+	stroke-width: 4;
+	stroke-linecap: round;
+}
+
+dialog {
+	padding: 20px;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	width: 300px;
+	text-align: center;
+}
+
+dialog::backdrop {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-buttons button {
+	margin: 10px;
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
